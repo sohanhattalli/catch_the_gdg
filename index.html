@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#090a0c" />
+    <title>Catch the Google | GDG BITS Pilani Dubai</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="./" aria-label="Catch the Google home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span><strong>Google Developer Group</strong><small>BITS Pilani Dubai Campus</small></span>
+        </a>
+      </header>
+
+      <section class="screen intro-screen" id="intro-screen" aria-labelledby="game-title">
+        <div class="intro-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> One minute. One target. Make it count.</p>
+          <h1 id="game-title">Catch the<br /><em>Google.</em></h1>
+          <p class="intro-description">A fast reaction challenge for the sharpest clicks on campus. Catch the multicolor Google G, dodge the fakes, and climb the board.</p>
+          <form class="start-form" id="start-form">
+            <label for="player-name">Player name</label>
+            <div class="name-row">
+              <input id="player-name" name="player-name" maxlength="18" autocomplete="off" placeholder="Enter your name" required />
+              <button class="primary-button" type="submit">Play now <span aria-hidden="true">&rarr;</span></button>
+            </div>
+          </form>
+        </div>
+        <aside class="leaderboard-panel" aria-labelledby="leaderboard-title">
+          <div class="panel-heading"><div><p class="kicker"></p><h1 id="leaderboard-title">Hall of fame</h1></div><span class="trophy" aria-hidden="true">🏆</span></div>
+          <ol class="leaderboard" id="intro-leaderboard"></ol>
+          <p class="empty-board" id="intro-empty">Your name could be right here.</p>
+        </aside>
+      </section>
+
+      <section class="screen game-screen hidden" id="game-screen" aria-labelledby="game-status">
+        <div class="game-header">
+          <div><p class="kicker">CATCH THE GOOGLE</p><h2 id="game-status">Catch it, <span id="active-player">Player</span>.</h2></div>
+          <div class="game-stats"><div><span>Score</span><strong id="score">0</strong></div><div class="combo-stat"><span>Combo</span><strong id="combo">0</strong></div><div class="time-stat"><span>Time</span><strong><span id="time-left">60</span><small>s</small></strong></div></div>
+        </div>
+        <div class="progress-track"><span id="time-progress"></span></div>
+        <div class="playfield" id="playfield" aria-label="Game area"></div>
+        <div class="game-footer"><span><i class="legend-dot real"></i>Catch the Google G</span><span><i class="legend-dot fake"></i>Avoid the fakes</span><button class="quiet-button" id="quit-button" type="button">Quit round</button></div>
+      </section>
+
+      <section class="screen result-screen hidden" id="result-screen" aria-labelledby="result-title">
+        <div class="result-card">
+          <p class="kicker">TIME'S UP</p><div class="result-medal" aria-hidden="true">⏱️</div>
+          <h2 id="result-title">Nice catching, <span id="result-player">Player</span>.</h2>
+          <p class="result-score"><strong id="final-score">0</strong><span>points</span></p>
+          <p class="result-note" id="result-note">That score is going on the board.</p>
+          <div class="result-actions"><button class="primary-button" id="play-again" type="button">Play again <span aria-hidden="true">&rarr;</span></button><button class="secondary-button" id="back-home" type="button">Back to start</button></div>
+        </div>
+        <aside class="leaderboard-panel result-board"><div class="panel-heading"><div><p class="kicker"></p><h1>Hall of fame</h1></div><span class="trophy" aria-hidden="true">🏆</span></div><ol class="leaderboard" id="result-leaderboard"></ol></aside>
+      </section>
+      <footer class="footer-note"><span></span><span class="color-dashes"><i></i><i></i><i></i><i></i></span></footer>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="firebase-config.js"></script>
+    <script src="app.js?v=8"></script>
+  </body>
+</html>
