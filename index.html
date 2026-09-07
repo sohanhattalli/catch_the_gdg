@@ -11,8 +11,7 @@
     <main class="app-shell">
       <header class="topbar">
         <a class="brand" href="./" aria-label="Catch the Google home">
-          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-          <span><strong>Google Developer Group</strong><small>BITS Pilani Dubai Campus</small></span>
+          <img class="brand-logo" src="docs/gdg-logo-dark.e5d5deb5.png" alt="Google Developer Group — BITS Pilani Dubai Campus" />
         </a>
       </header>
 
@@ -39,11 +38,11 @@
       <section class="screen game-screen hidden" id="game-screen" aria-labelledby="game-status">
         <div class="game-header">
           <div><p class="kicker">CATCH THE GOOGLE</p><h2 id="game-status">Catch it, <span id="active-player">Player</span>.</h2></div>
-          <div class="game-stats"><div><span>Score</span><strong id="score">0</strong></div><div class="combo-stat"><span>Combo</span><strong id="combo">0</strong></div><div class="time-stat"><span>Time</span><strong><span id="time-left">60</span><small>s</small></strong></div></div>
+          <div class="game-stats"><div><span>Score</span><strong id="score">0</strong></div><div class="streak-stat"><span>Streak</span><strong id="streak">0</strong></div><div class="boost-stat"><span>Boost</span><strong id="boost">×1</strong></div><div class="time-stat"><span>Time</span><strong><span id="time-left">60</span><small>s</small></strong></div></div>
         </div>
         <div class="progress-track"><span id="time-progress"></span></div>
-        <div class="playfield" id="playfield" aria-label="Game area"></div>
-        <div class="game-footer"><span><i class="legend-dot real"></i>Catch the Google G</span><span><i class="legend-dot fake"></i>Avoid the fakes</span><button class="quiet-button" id="quit-button" type="button">Quit round</button></div>
+        <div class="playfield" id="playfield" aria-label="Game area"><div class="final-banner" id="final-banner" role="status" hidden><strong>3× SCORE</strong><span>FINAL 10 SECONDS</span></div></div>
+        <div class="game-footer"><span><i class="legend-dot real"></i>Catch the Google G</span><span><i class="legend-dot fake"></i>Avoid the fakes</span><span><i class="legend-dot power"></i>Grab the ×2 boost</span><span><i class="legend-dot boss"></i>Smash the boss</span><button class="quiet-button" id="quit-button" type="button">Quit round</button></div>
       </section>
 
       <section class="screen result-screen hidden" id="result-screen" aria-labelledby="result-title">
@@ -57,10 +56,11 @@
         <aside class="leaderboard-panel result-board"><div class="panel-heading"><div><p class="kicker"></p><h1>Hall of fame</h1></div><span class="trophy" aria-hidden="true">🏆</span></div><ol class="leaderboard" id="result-leaderboard"></ol></aside>
       </section>
       <footer class="footer-note"><span></span><span class="color-dashes"><i></i><i></i><i></i><i></i></span></footer>
+      <div class="footer-mark"><img src="docs/gdg-mark.7ce926e6.png" alt="" aria-hidden="true" /></div>
     </main>
     <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
     <script src="firebase-config.js"></script>
-    <script src="app.js?v=8"></script>
+    <script src="app.js?v=10"></script>
   </body>
 </html>

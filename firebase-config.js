@@ -2,6 +2,7 @@
 window.FIREBASE_CONFIG = {
   apiKey: 'AIzaSyBdBL4Bk3bAUxv9_wvvUNzURZzBhdeR7Dw',
   authDomain: 'catchthegdg.firebaseapp.com',
+  databaseURL: 'https://catchthegdg-default-rtdb.firebaseio.com',
   projectId: 'catchthegdg',
   storageBucket: 'catchthegdg.firebasestorage.app',
   messagingSenderId: '958135904818',

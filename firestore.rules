@@ -9,7 +9,7 @@ service cloud.firestore {
         && request.resource.data.name.size() <= 18
         && request.resource.data.score is int
         && request.resource.data.score >= 0
-        && request.resource.data.score <= 600
+        && request.resource.data.score <= 2000
         && request.resource.data.createdAt == request.time;
       allow update, delete: if false;
     }
